@@ -5,9 +5,9 @@ fun main()
     println(per.name)
     println(per.age)
 
-    var per2 = person2("Aditya" , 22)
-    println(per2.name)
-    print(per2.age)
+//    var per2 = person2("Aditya" , 22)
+//    println(per2.name)
+//    print(per2.age)
 
     var c1 = Car("Mustang",4,7,false)
 
@@ -68,18 +68,26 @@ class Car( name:String,val tyres: Int,val maxSeating: Int, hasAirBag:Boolean)
 }
 
 // secondary constructor:
-class Human(val name:String ,val age:Int,val dob:String,val genedar:String)
+class Human(val name:String ,val age:Int,val dob:String, gender:String)
 {
+    lateinit var gen:String
     init {
-        println("First init")
+        println("Gender is $gender")
+        this.gen = gender
     }
     init {
-        println("Second init")
+        println("Dob is $dob")
     }
 
-//    secondary constructor: there is a rule in kotlin that whenever you create a secondary constructor then you have to call primary constructor also if present.
+//    secondary constructor: there is a rule in kotlin that whenever you
+//    create a secondary constructor then you have to call primary constructor also if present.
     constructor(nameParam:String, age:Int):this(nameParam,age,"02-10-2004","M") // it will call primary constructor.
     {
         println("Hello jaan")
+    }
+
+    fun printDetails()
+    {
+        println("Name : $name\nAge: $age\nDOB: $dob\nGender: $gen")
     }
 }
