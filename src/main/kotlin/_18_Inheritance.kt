@@ -10,7 +10,7 @@ val basicPhone:BasicPhone = BasicPhone();
 /*
  In java, we use final keyword with class or method so that they cannot be inherited and override.
 But Kotlin has a special features i.e. classes and methods are not open for extensions by default, which means they
-are by default final class or final function. It means Open classes and methods in kotlin are equivalent to the opposite
+are by default public and final class or final function. It means Open classes and methods in kotlin are equivalent to the opposite
 of final in java, an open method is overridable and open class is extendable in kotlin.
  */
 open class Phone{
