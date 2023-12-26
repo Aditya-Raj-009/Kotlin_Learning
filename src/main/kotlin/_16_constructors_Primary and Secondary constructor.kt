@@ -79,8 +79,11 @@ class Human(val name:String ,val age:Int,val dob:String, gender:String)
         println("Dob is $dob")
     }
 
-//    secondary constructor: there is a rule in kotlin that whenever you
-//    create a secondary constructor then you have to call primary constructor also if present.
+/*    secondary constructor: there is a rule in kotlin that whenever you
+   create a secondary constructor then you have to call primary constructor also if present.
+   In secondary constructor we cannot declare variable as property of the class.i.e. we
+   cannot use var or val keyword with parameter in secondary constructor.
+ */
     constructor(nameParam:String, age:Int):this(nameParam,age,"02-10-2004","M") // it will call primary constructor.
     {
         println("Hello jaan")
