@@ -22,7 +22,7 @@ fun main() {
 
 //    val sub:Int = a.sub(b)
 
-//    since we have used 'infix' keyword as prefix of sub() method, we can also use it as: "
+//    since we have used 'infix' keyword as prefix of sub() method, so we can do this: "
     val sub : Int = a sub b // (Notice: we haven't used '.' and '()' .
     println(sub)
 

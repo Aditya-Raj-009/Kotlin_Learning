@@ -59,11 +59,6 @@ fun Student.isScholar(marks:Double):Boolean
 {
     return marks>95.0
 }
-open class Student
-{
-    fun hasPassed(marks:Double):Boolean = marks>45.0
-}
-
 /*
 class newStudent: Student()
 {
