@@ -86,6 +86,7 @@ class Human(val name:String ,val age:Int,val dob:String, gender:String)
  */
     constructor(nameParam:String, age:Int):this(nameParam,age,"02-10-2004","M") // it will call primary constructor.
     {
+//        the body of secondary constructor will call after the init block.
         println("Hello jaan")
     }
 
