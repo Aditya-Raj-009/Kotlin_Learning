@@ -70,7 +70,7 @@ class Car( name:String,val tyres: Int,val maxSeating: Int, hasAirBag:Boolean)
 // secondary constructor:
 class Human(val name:String ,val age:Int,val dob:String, gender:String)
 {
-    lateinit var gen:String
+     var gen:String
     init {
         println("Gender is $gender")
         this.gen = gender
