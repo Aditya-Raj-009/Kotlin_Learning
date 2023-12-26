@@ -39,8 +39,15 @@ override  fun display()= println("One Plus Display!")
 
     @Override
     override fun makeCall() {
-        super.makeCall()
+//        super.makeCall()
+//        Or we can also call it as:
+        super<Mobile>.makeCall()
         println("Now calling in OnePlus!")
+
+/*        super<Mobile>.makeCall(): this will helpful when Mobile class
+        is also implementing an interface with same method "makeCall()",
+        so that compiler not get confuse by using this way.
+ */
     }
 
     // Any : Every Kotlin class has Any as a superclass
