@@ -15,6 +15,8 @@ interface Draggable{
     // In kotlin all interface member are public and open by default NOT FINAL.
     var dragSpeed:Int
     fun drag();
+
+//    Interface can contain both normal as wel as abstract methods:
     fun onTouch()
     {
         println("Touched in Draggable..")
