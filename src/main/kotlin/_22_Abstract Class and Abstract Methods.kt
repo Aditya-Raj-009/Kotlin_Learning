@@ -10,6 +10,7 @@ fun main() {
 // by default abstract are open,so we don't need to define it explicitly.
 abstract class Mshape{
 
+    abstract var shapeName:String;
     abstract fun area():Double;
 
     fun display()
@@ -20,6 +21,8 @@ abstract class Mshape{
 
 class MCircle(val radius:Double):Mshape()
 {
+    override var shapeName: String = "Circle"
+
     override fun area(): Double {
     return Math.PI*radius.pow(2);
     }
