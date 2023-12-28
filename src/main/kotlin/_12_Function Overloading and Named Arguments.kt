@@ -12,7 +12,7 @@ return num1+num2;
 }
 */
 
-fun pow(n1:Double,n2:Double):Double = n1.pow(n2);
+fun pow(n1: Double, n2:Double):Double = n1.pow(n2);
 
 fun main()
 {
