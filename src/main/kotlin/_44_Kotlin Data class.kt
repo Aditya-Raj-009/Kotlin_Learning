@@ -21,6 +21,8 @@ fun main() {
 
     var user1 : User = User("Sam",10)
     var user2 : User = User("Sam",10)
+    user1.displayUser()
+    user2.displayUser()
 
 /*    since both objects contains same value, so after comparing it should be
    equal right?
@@ -54,6 +56,9 @@ fun main() {
 
     println(newUser2)
 
+    newUser.displayUser()
+    newUser2.displayUser()
+
     /**
      * output:
      *
@@ -69,3 +74,9 @@ fun main() {
 }
 
   data class User(var name:String, var id:Int) // data classes must contains parameter with var or val.
+  {
+      fun displayUser():Unit
+      {
+          println("User name is $name and id is $id")
+      }
+  }
