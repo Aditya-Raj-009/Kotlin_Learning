@@ -59,23 +59,52 @@ class Human(type: String,classType: String) : Animal(type,classType)
 }
 
 fun main() {
-    val prac:prac3 = prac3(name = "Aditya Raj",18,"adit12333","adityaraj@gmail.com")
+//    val prac:prac3 = prac3(name = "Aditya Raj",18,"adit12333","adityaraj@gmail.com")
+//
+//    prac.name()
+//    prac.age()
+//    prac.email()
+//    prac.id()
+//
+//    println("Am I eligible to vote: ${prac.canVote()}")
+//
+//    val animal:Animal = Animal()
+//    animal.type()
+//
+//    val human:Animal = Human("Human","Human")
+//    human.className()
+//    human.greet()
+//    human.checkAnim()
 
-    prac.name()
-    prac.age()
-    prac.email()
-    prac.id()
 
-    println("Am I eligible to vote: ${prac.canVote()}")
+    var imgUri:String = "content://com.miui.gallery.open/raw/%2Fstorage%2Femulated%2F0%2FAndroid%2Fmedia%2Fcom.whatsapp%2FWhatsApp%2FMedia%2FWhatsApp%20Images%2FIMG-20231229-WA0007.jpg"
+    var img2Uri:String = "content://com.miui.gallery.open/raw/%2Fstorage%2Femulated%2F0%2FAndroid%2Fmedia%2Fcom.whatsapp%2FWhatsApp%2FMedia%2FWhatsApp%20Images%2FIMG-20231230-WA0014.jpg"
 
-    val animal:Animal = Animal()
-    animal.type()
-
-    val human:Animal = Human("Human","Human")
-    human.className()
-    human.greet()
-    human.checkAnim()
+    println(matchPercent(img2Uri,imgUri))
 
 
+}
 
+private fun matchPercent(img1:String,img2:String):Double
+{
+    var img1Size:Int = img1.length
+    var img2Size:Int = img2.length
+    val maxImgSize: Int = Math.max(img1Size,img2Size)
+    var matchPercentage:Double
+    var match:Double=0.0
+    var j:Int = 0
+    for(i in img1)
+    {
+        if(i == img2[j++])
+        {
+            match++
+        }
+    }
+    matchPercentage = ((match/maxImgSize)*100).toDouble()
+    return matchPercentage
+}
+private fun String.isEqualImageUri(imgUri:String):Boolean
+{
+
+    return matchPercent(this,imgUri)>=90
 }
