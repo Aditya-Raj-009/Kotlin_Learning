@@ -13,6 +13,8 @@ import pow
  * any: Do any element in list satisfy the predicate?
  * count: Total element that satisfy the predicate.
  * find: Return the First element that satisfy the predicate.
+ * last: Return the Last element that satisfy the predicate. Throws exception if not find any element.
+ * first : same as find,but throws exception if not find any element.
  *
  * More Functions:
  * flatmap: Filter elements from collection of collection.
