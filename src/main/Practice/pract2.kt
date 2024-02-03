@@ -35,4 +35,11 @@ fun main(args:Array<String>) {
 
     println("Product of 5,6,7,3,and 9 is ${product(5.0,6.7,7.5,3.38,9.7)}")
 
+    var a = "aditya";
+    a = with(a) {
+        this.uppercase()
+
+    }
+    println(a)
+
 }
