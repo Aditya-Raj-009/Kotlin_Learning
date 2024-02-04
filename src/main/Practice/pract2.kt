@@ -2,44 +2,66 @@ package main.Practice
 
 
 
-fun search(arr:Array<Int>,key:Int):Int = arr.indexOf(key);
-
-fun add(vararg v:Int):Int // can accept multiple value.
+open class Mobile(var mobileType:String, var mobileName:String, var osType:String)
 {
-return v.sum();
-}
 
-fun product(vararg v:Double):Double
-{
-    var p:Double = 1.0;
-    for( i in 0 until v.size)
+    constructor():this("Basic","Nokia220","Android")
+
+    init {
+        println("Basic Mobile")
+    }
+
+    fun sendSms(sms:String)
     {
-        p*=v.get(i)
+        println("Sending sms $sms....")
     }
-    return p;
+
+    fun call(mobNo:Long)
+    {
+        println("Calling on $mobNo....")
+    }
+
+
 }
 
+class SmartPhone(mobileType: String,mobileName: String,osType: String):Mobile(mobileType,mobileName,osType){
 
-fun main(args:Array<String>) {
-
-    var arr:Array<Int> = arrayOf(1,3,4,5,6,8);
-    var arr2 = arrayOf<Int>(8,9,1,4,6,3);
-
-    val key:Int = 8;
-    println("Index of element $key in ${arr.contentToString()} is ${search(arr,key = key)}");
-
-    println("Sum of 5,6,7,3,and 9 is ${add(5,6,7,3,9)}")
-
-    val arrs: (Array<Int>, Int) -> Int = ::search;
-    println("Index of element $key in ${arr2.contentToString()} is ${arrs(arr2, key)}");
-
-    println("Product of 5,6,7,3,and 9 is ${product(5.0,6.7,7.5,3.38,9.7)}")
-
-    var a = "aditya";
-    a = with(a) {
-        this.uppercase()
-
+    init {
+        println("Smartphone")
     }
-    println(a)
+    fun sendWhatsAppChat(msg:String, to: Long)
+    {
+        println("Sending msg chat...$msg to $to")
+    }
+
+    fun browse(endpoints:String)
+    {
+        println("Search $endpoints on google...")
+    }
+    fun takePicture()
+    {
+        println("Taking picture..")
+    }
+
+    fun videoRecording()
+    {
+        println("Video recording started...")
+    }
+}
+fun main() {
+
+    var motorola:SmartPhone = SmartPhone("SmartPhone","MotoG60","Android")
+
+    with(motorola)
+    {
+        sendSms("Hello")
+        call(9693494500)
+        takePicture()
+        videoRecording()
+        browse("Largest Bridge")
+        sendWhatsAppChat("Namste",8252800394)
+    }
+
+
 
 }
