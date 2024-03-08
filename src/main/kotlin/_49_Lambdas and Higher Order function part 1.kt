@@ -61,6 +61,9 @@ fun main() {
     val myLambda:(Int) -> Unit = {s:Int-> println(s) }
 
     program.addTwoNumber(2,9,myLambda)
+
+    // another way to call lambda function (using invoke() function):
+    myLambda.invoke(45)
 }
 
 class Program{
