@@ -38,7 +38,7 @@ class person() // empty constructor.
     val age:Int = 0
 }
 
-// Intialise paramenter through constructor:
+// Initialise parameter through constructor:
 class person2( nameparam:String ,  Myage:Int)  // unless and until you not use val or var keyword property will not define.
 // Without either keyword the parameter is only a parameter, and thus only accessible during initialization..
 {
